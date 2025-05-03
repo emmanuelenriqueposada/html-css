@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /** Tipos de selectores en css: clases, id, etiqueta, universal, atributo */
+
+    * {
+        /* Selector Universal */
+
+        margin: 0;
+        padding: 0;
+        /** ayuda a que no se colapsen las caja con margin y padding */
+        box-sizing: border-box;
+    }
+
+    .title {
+        /* Selector Por Clase */
+
+        color: rgb(0, 255, 76);
+        text-align: center;
+
+    }
+
+    h1 {
+        /* Selector Por etiqueta */
+
+        color: rgb(226, 43, 43);
+
+    }
+
+    #title {
+        /* Selector Por ID */
+
+        font-size: 3em;
+    }
+
+
+    a[href="#"]:hover {
+        /* Selector Por Atributo */
+        color: orangered;
+    }
+
+    .container article {
+        background-color: #5c1b88;
+        width: 200px;
+        height: 200px;
+        /** 1rem (arriba, abajo) 0 lados */
+        margin: 2rem 0;
+        /** Afuera de la caja */
+        padding: 1rem;
+        /** Adentro de la caja */
+        border-radius: 8%;
+    }
+
+    /** pseudoelemento, agregamos contenido */
+    .hipervinculo::after {
+        content: "🧀 ";
+    }
+
+    /** pseudoelemento, cambiar el estado del Hipervinculo*/
+    .hipervinculo:hover {
+        color: red;
+    }
+    /** pseudoelemento, cambiar el estado del ID caja1*/
+    #caja1:hover{
+        background-color: chocolate;
+    }
+
+    /* #caja1 {
+        background-color: #f0f0f0;
+    } */
+
+    /** pseudoelemento nth-child hace un conteo interno y aplica el formato */
+    .container article:nth-child(4) {
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <h1 class="title" id="title">CSS</h1>
+    <a href="https://res.cloudinary.com/dg4jih25r/image/upload/v1746117468/image-omelette_tkehzt_zjcztg.jpg"
+        class="hipervinculo">Click AQUI</a>
+
+    <section class="container">
+        <h2 class="subtitle">Subtitulo</h2>
+        <article id="caja1"></article>
+        <article id="caja2"></article>
+        <article id="caja3">
+            <h2>FSJ2025</h2>
+        </article>
+    </section>
+
+</body>
+
+</html>

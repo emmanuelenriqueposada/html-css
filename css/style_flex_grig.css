@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** pseudoclase :root -> global, definir variables, semantica de colores, tipos de fuentes, tamano, etc */
+:root {
+  --box-color: #075e35;
+  --secondary-color: #fff;
+  --font-family: "Poppins", sans-serif;
+}
+.title {
+  text-align: center;
+  font-family: var(--font-family);
+}
+
+.box {
+  background-color: var(--box-color);
+  width: 200px;
+  height: 200px;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+  /** flexbox + css grid (margen) */
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+}
+.gridbox {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+}
